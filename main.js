@@ -1,13 +1,21 @@
 "use strict";
 
+// const userName = "Bob";
+// const myAge = 23;
+// let y = 44;
+
 // Scoping:
 
 // #1
 // let car = "audi";
-// function testDrive() {
-//   let car = "ferrari";
-//   console.log(`I got a raise, I can drive a ${car} now`);
-// }
+// let x = 5;
+function testDrive() {
+  let car = "ferrari";
+  // const test = 99;
+  console.log(`I got a raise, I can drive a ${car} now`);
+  console.log(x);
+  //Output : 5
+}
 // console.log(`Right now, I drive an ${car}`);
 
 // #2
@@ -35,9 +43,13 @@
 // var x = 100;
 
 // actually interpreted like this:
-// var x;
+// var x; // x = undefined
 // console.log(x, "x");
 // x = 100;
+
+// console.log(x, "x");
+// const x = 100;
+// let x = 100; // or
 
 // #5
 // const isTrue = true;
@@ -77,9 +89,8 @@
 
 // Hoisting with Let and Const:
 
-// console.log(foo); // Uncaught ReferenceError: Cannot access 'foo' before initialization
-
 // let foo = "far";
+// console.log(foo); // Uncaught ReferenceError: Cannot access 'foo' before initialization
 
 // console.log(boo); // Uncaught ReferenceError: Cannot access 'boo' before initialization
 
@@ -87,17 +98,18 @@
 
 // Function hoisting
 
-foo(); // Uncaught TypeError: foo is not a function
-var foo = function () {
-  console.log("hello foo");
-};
+// foo(); // Uncaught TypeError: foo is not a function
+// var foo = function (a, b) {
+//   console.log("hello foo");
+//   return 5;
+// };
 
-bar(); // Uncaught ReferenceError: Cannot access 'bar' before initialization
-let bar = function () {
-  console.log("hello bar");
-};
+// bar(); // Uncaught ReferenceError: Cannot access 'bar' before initialization
+// let bar = function () {
+//   console.log("hello bar");
+// };
 
-baz(); // Uncaught ReferenceError: Cannot access 'baz' before initialization
-const baz = function () {
-  console.log("hello baz");
-};
+// baz(); // Uncaught ReferenceError: Cannot access 'baz' before initialization
+// const baz = function () {
+//   console.log("hello baz");
+// };
